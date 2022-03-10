@@ -27,6 +27,11 @@ def account_balance(account):  # reusable function to get balance
 
 
 @app.route('/')
+def welcome():
+    return 'Shill City API'
+
+
+@app.route('/trtn.json')
 def trtn_value():  # put application's code here
     trtnbal = account_balance(settings.trtnacct)
     usdcbal = account_balance(settings.usdcacct)
